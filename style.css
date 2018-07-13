@@ -1,0 +1,362 @@
+* {box-sizing: border-box !important;}
+body {position: relative;}
+
+p {
+	font-family: 'Inconsolata', sans-serif !important;
+	font-size: 1em;
+}
+
+.rps {
+	width: 100%;
+	position: absolute;
+}
+
+h1, .h1 {
+	font-family: 'Karla', sans-serif !important;
+	color: #1B1B1B;
+	font-size: 4em !important;
+	margin: 2px;
+	font-weight: 700 !important;
+	text-transform: lowercase;
+	color: black;
+}
+
+.abutton {
+	color: #fff;
+	background-color: #000;
+	text-align: center;
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+}
+
+.atop {margin-bottom: 30px;}
+
+input { 	
+	font-family: 'Karla', sans-serif !important;
+	color: #1B1B1B;
+	font-size: 2em !important;
+	padding: 10px;
+	font-weight: 700 !important;
+	text-transform: uppercase;
+	color: black;
+	width: 100%;
+	border: 3px solid black
+
+}
+
+h3 {
+	padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+	 h1, .h1 {
+		font-size: 4em !important;
+	}
+}
+
+@media (max-width: 640px) {
+	 h1, .h1 {
+		font-size: 3em !important;
+	}
+}
+
+@media (max-width: 480px) {
+	 h1, .h1 {
+		font-size: 2em !important;
+	}
+}
+
+.clear {clear:both;}
+
+.logo {
+	width: 30px;
+	margin-right: 10px;
+	font-family: 'Karla', sans-serif !important;
+}	
+
+.navbar {
+	background-color: #fdd835;
+	;
+}
+
+.navbar-brand {
+	font-family: 'Karla', sans-serif !important;
+	color: #000 !important;
+}
+
+.nav-link {
+	font-family: 'Unica One', sans-serif;
+	color: #1B1B1B;
+	margin: 2px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.nav-item {
+	padding: 0 15px;
+}
+
+.up {
+	bottom: 30px;
+	right: 30px;
+	position: fixed;
+	z-index: 999;
+
+}
+
+.up img {
+	width: 50px;
+	background-color: black;
+	padding: 20px;
+}
+
+.col-lg-12 {
+	padding: 0px !important;
+}
+
+.header {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	background-image: url('Images/poolpattern.jpg');
+	position: absolute;
+	top: 0px;
+	left: 0px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@media (max-width: 500px) {
+	 .header, .title, .split4, .subfooter1 {
+		background-attachment: scroll;
+	}
+}
+
+.work {
+	background-color: white;
+	width: 100%;
+}
+
+.title {
+	padding: 1% 10%;
+	width: 100%;
+	color: white;
+	line-height: 1.5 em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url('Images/poolpattern.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title:before {
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+}
+
+.title:after {
+    position: absolute;
+    z-index: -1;
+    top: .125em;
+    right: .125em;
+    bottom: .125em;
+    left: .125em;
+    background-color: #000;
+}
+
+.title:before,
+.title:after {
+    position: absolute;
+    content: '';
+}
+
+.banner {
+	color: white;
+	padding: 30px;
+}
+
+.subfooter1 {
+	background-image: url('Images/pinkandblue.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 60vh !important;
+}
+
+.subfooter2 {
+	background-color: black;
+}
+
+.footer {
+	background-color: #e65100;
+	color: #ffffff;
+}
+
+.row {
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+}
+
+.socialicons {
+	float: left;
+	padding: 36px;
+	width: 100%;
+}
+
+.nobg {
+	background-color: transparent;
+	margin-right: 10px;
+}
+
+.copyright {
+	width: 50%;
+	float: right;
+	text-align: right;
+	font-family: 'Inconsolata', sans-serif;
+	margin-right: 100px;
+}
+
+@media (max-width: 480px) {
+	 .copyright {
+		display: none;
+	}
+}
+
+.split3 {
+	background-color: white;
+	padding: 50px 50px !important;
+	overflow-y: scroll;
+}
+
+.split4 {
+	background-color: #ffe0b2 ;
+}
+
+.split3, .split4 {
+	height: 82vh;
+}
+
+.fadeImg {
+	
+}
+
+.fadeImg img {
+	padding: 10%;
+}
+
+.galleryhover {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: transparent;
+	text-align: center;
+    transition-property: all;
+    transition-duration: .5s;
+    transition-delay: .1s;
+	font-size: 3em;
+	padding: 70px;
+	line-height: 50px;
+	color: transparent;
+}
+
+.galleryhover:hover {
+	background-color: black;
+	opacity: 0.8;
+	color: white;
+}
+
+.gallery1 {
+	background-image: url('Images/aerialsand.jpg');
+    background-size: cover;
+    height: 50vh;
+}
+
+.gallery2 {
+	background-image: url('Images/glass.jpg');
+    background-size: cover;
+    height: 50vh;
+}
+
+.gallery3 {
+	background-image: url('Images/paint.jpg');
+    background-size: cover;
+    height: 50vh;
+}
+
+.gallery4 {
+	background-image: url('Images/plants.jpg');
+    background-size: cover;
+    height: 50vh;
+}
+
+.gallery5 {
+	background-image: url('Images/poolside.jpg');
+    background-size: cover;
+    height: 50vh;
+}
+
+.gallery6 {
+	background-image: url('Images/purplecloud.jpg');
+    background-size: cover;
+    height: 50vh;
+}
+
+.gallery7 {
+	background-image: url('Images/rock.jpg');
+    background-size: cover;
+    height: 50vh;
+}
+
+.gallery8 {
+	background-image: url('Images/sheets.jpg');
+    background-size: cover;
+    height: 50vh;
+}
+
+.gallery9 {
+	background-image: url('Images/waves.jpg');
+    background-size: cover;
+    height: 50vh;
+}
+
+.gallery10 {
+	background-image: url('Images/wood.jpg');
+    background-size: cover;
+    height: 50vh;
+}
+
+.gallery11 {
+	background-image: url('Images/drought.jpg');
+    background-size: cover;
+    height: 50vh;
+}
+
+.gallery12 {
+	background-image: url('Images/green.jpg');
+    background-size: cover;
+    height: 50vh;
+}
+
+form {
+	font-family: 'Inconsolata', sans-serif;
+}
+
+button {
+	padding: 10px 30px;
+	border: 0px;
+	background-color: white;
+	font-family: 'Unica One', sans-serif !important;
+	text-transform: uppercase !important;
+	font-weight:700;
+	}
+
+
+
+
