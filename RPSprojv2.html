@@ -27,7 +27,7 @@
       }
       button {
        height: 30px;
-       width: 60px;
+       width: 90px;
        background: #90EE90;
        border: 1px;
        border-style: solid;
@@ -110,20 +110,25 @@
                 <div class='player2'> </div>
             </div>
 
-            <center><div id="GameGontainer" style="float: left;" > <h1>P1</h1>
-            <div class="gameidDiv"  style="float: left;"> <span>Game ID: </span><span class="gameid"></span></div>
-            <div class="drawcnt"> <span>Draws left: </span></div>
-            <div class="playercard"> </div>
-            <button calss="drawbutton" id="player1"> Draw</button>
-            </div></center>
-            </div>
-            <center><div id="GameGontainer" style="float: right;" > <h1>P2</h1>
-            <div class="gameidDiv"  style="float: left;"> <span>Game ID: </span><span class="gameid"></span></div>
-            <div class="drawcnt"> <span>Draws left: </spaan></div>
-            <div class="playercard"> </div>
-            <button calss="drawbutton" id="payer2"> Draw</button>
-            </div></center>
+            <div class="seconddiv">
+            <center>
+              <div id="GameGontainer" style="float: left;" > <h1>P1</h1>
+                  <div class="gameidDiv"  style="float: left;"> <span>Game ID: </span><span class="gameid"></span></div>
+                  <div class="drawcnt"> <span>Draws left: </span></div>
+                  <div class="playercard"> </div>
+                  <button calss="drawbutton" id="player1"> Draw</button>
+              </div>
+            </center>
 
+            <center>
+              <div id="GameGontainer" style="float: right;" > <h1>P2</h1>
+                <div class="gameidDiv"  style="float: left;"> <span>Game ID: </span><span class="gameid"></span></div>
+                <div class="drawcnt"> <span>Draws left: </spaan></div>
+                <div class="playercard"> </div>
+                <button calss="drawbutton" id="payer2"> Draw</button>
+              </div>
+            </center>
+            </div>
             </div>
           </div>
         </div>
@@ -142,6 +147,7 @@
 
   <!-- Script -->
   <script type="text/javascript">
+  $(".seconddiv").hide()
   var randomnumber = 0
   console.log('Begining')
   var config = {
@@ -260,10 +266,9 @@ function initGame(tmp)
     var cardIndexRef = database.ref().child("cardIndex_"+gameid)
     cardIndexRef.set({p1cards: p1})
     cardIndexRef.update({p2cards: p2})
-
-    $('.player1').text(p1)
-    $('.player2').text(p2)
+    
     $('.card-heading').hide()
+    $('.seconddiv').show()
 
   }
 
