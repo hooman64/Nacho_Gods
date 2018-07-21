@@ -1,3 +1,4 @@
+// Firebase Stuff
 
   $(".seconddiv").hide()
 
@@ -14,6 +15,20 @@
  var database = firebase.database();
  var connectionsRef = database.ref("/connections");
  var Util_id_tracker = database.ref("/util_id_tracker");
+
+ // Create Full Deck
+
+  p1 =[]
+  p2 =[]
+  var p1_indexcounter
+  var p2_indexcounter
+  faceValue = [2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6,7,7,7,7,8,8,8,8,9,9,9,9,10,10,10,10,11,11,11,11,12,12,12,12,13,13,13,13,14,14,14,14]
+  var player2_score = 0
+  var player = 'player1'
+  var score = 0
+  var playerID
+  var p1DrawingLeft = 26;
+  var p2DrawingLeft = 26;
  
  function buildCard()
  {
@@ -32,6 +47,8 @@
     faceValue.splice(randIndex, 1)
   }
  }
+
+ // Create Game ID
 
 function getuniqueId()
 {
@@ -58,6 +75,7 @@ else {
 
 gameids = []
 
+// Join with Existing Game ID
 
 function go(enteredGameId)
 { 
@@ -154,6 +172,17 @@ function go(enteredGameId)
 
     
 }
+
+// Game Initiation
+
+  //Starts here
+  console.log('Starting Game')
+
+  $('.NewgameButton').on('click', function(event){
+      event.preventDefault();
+      initGame($(this))
+  
+  });
 
 function initGame(tmp)
   {
@@ -257,6 +286,8 @@ function initGame(tmp)
 
 }
 }
+
+// War Logic
 
 
 function compareCard(p1_indexcounter, p2_indexcounter, gameid, playerID) {
@@ -363,29 +394,3 @@ else
 
  });  
 }
-
-
-
-
-
-
-p1 =[]
-p2 =[]
-var p1_indexcounter
-var p2_indexcounter
-faceValue = [2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,6,6,6,6,7,7,7,7,8,8,8,8,9,9,9,9,10,10,10,10,11,11,11,11,12,12,12,12,13,13,13,13,14,14,14,14]
-var player2_score = 0
-var player = 'player1'
-var score = 0
-var playerID
-var p1DrawingLeft = 26;
-var p2DrawingLeft = 26;
-  //Starts here
-console.log('Starting Game')
-
-$('.NewgameButton').on('click', function(event){
-    event.preventDefault();
-    initGame($(this))
-
-});
-
