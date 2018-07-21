@@ -1,106 +1,122 @@
-<!-- <!DOCTYPE html>
-
-<html lang="en-us">
-
-<head>
-
-  <meta charset="UTF-8">
-  <title>CountDown Button with Firebase!</title>
-
-</head>
-
-<body>
-
-    <div id="container">
-            <p>Win Count: <span id="wins">0</span></p>
-            <p>Loss Count: <span id="losses">0</span></p>
-            <p>Tie Count: <span id="ties">0</span></p>
-            <p>What you pressed: <span id="userChoice">-</span></p>
-            <p>What computer pressed: <span id="computerChoice">-</span></p>
-    </div>
-    
-
-<br><br><br><br><br><br>
-
-
-WORKING FIREBASE CODE 
-  <h1>Only
-    <span id="click-value"></span> clicks to go!!</h1>
-
-  <button id="click-button">Click Me!!!!</button>
-  <button id="restart-button">Restart</button>
-
-  <hr>
-
-  <h3>
-    <span id="watchers"></span> people are watching you click! Don't let them down!</span>
-  </h3>
-
-
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <script src="game.js"></script>
-</body>
-
-</html>
- -->
 
  <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Nacho Gods</title>
+<title>Nacho Gods - War Game</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Karla:400,700|Unica+One" rel="stylesheet">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
-   <link rel="stylesheet" href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
 
+<!--    N  A  V  I  G  A  T  I  O  N  _  B  A  R    -->
 <nav class="navbar navbar-expand-sm navbar-light bg-faded">
     <a class="navbar-brand" href="#">
-        <img class="logo" src="Images/discofrank.png" alt="disco">nacho gods
+        <img class="logo" src="Images/discofrank.png" alt="disco">WAR GAME
     </a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
     <div class="collapse navbar-collapse justify-content-end" id="nav-content">   
         <ul class="navbar-nav">
-<!--             <li class="nav-item"><a class="nav-link 1" href="#section1">About Me</a></li>
+      <!--  <li class="nav-item"><a class="nav-link 1" href="#section1">About Me</a></li>
             <li class="nav-item"><a class="nav-link 2" href="#section2">Gallery</a></li>
             <li class="nav-item"><a class="nav-link 3" href="#section3">Contact</a></li> -->
         </ul>
     </div>
 </nav>
 
-<div class="row" id="section1">
-    <div class="col-lg-6 col-md-12 split3">
-    <h1 class="abutton atop">NEW GAME</h1>
-    <h1 class="abutton">EXISTING GAME</h1>
-    <form><input type="text"><button></button></form>
-    <h3 class="abutton">enter game ID</h3>
-    <br><br>
+<!--   N  E  W  _ G  A  M  E  +  G  A  M  E  +  I  D   -->
+    
+    <!-- s p l i t 1 - g a m e _ e n t r y -->
+    <div class="row section1 card-default card-heading">
+        <div class="col-lg-6 col-md-12 split1">
+        
+          <button class="NewgameButton abutton">New Game</button>
+
+
+          <form>
+            <input type="text" placeholder="enter game id">
+            <button class="NewgameButton abutton">Submit</button>
+          </form>
+        </div>
+        
+     <!-- s p l i t 2  - s o m e t h i n g _ f u n -->
+        <div class="col-lg-6 col-md-12 split2">
+          <div class="nachoGif" >
+            <iframe src="https://giphy.com/embed/Nx3kgya4bTIGI" width="480" height="349" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+          </div>
+        </div>
     </div>
-    <div class="col-lg-6 col-md-12 split4">
-      <div class="fadeImg" >
-        <img style="display:none;" src="Images/rock.png">
-        <img style="display:none;" src="Images/paper.png">
-        <img style="display:none;" src="Images/scissors.png">
-      </div>
+
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<!--    G  A  M  E _ C  O  N  T  A  I  N  E  R    -->
+
+    <!-- s p l i t 3 -  p l a y e r _ O N E -->
+    <div class="row seconddiv" id="section2">
+          <div class="col-lg-6 col-md-12 split3">
+              <div id="GameGontainer">
+                  <h1>player 1</h1>
+                  <div class="gameidDiv">
+                       <h3>game ID: <span class="gameid"></span></h3>
+                  </div>
+
+                      <h3>draws left:<span class="p1drawcnt"></span></h3>
+
+                <div class="stack">
+                  <div class="back">
+                    <div class="tablecell">
+                      <img src="Images/playingcards/cardback.jpg" class="cardback">
+                    </div>                
+                    <div class="playercard1 deck tablecell">
+                    <!-- drawn card here -->
+                    </div>
+                </div>
+                  </div>
+
+                    <button class="drawbutton" id="player1"> Draw</button>
+              </div>
+          </div>
+
+    <!-- s p l i t 4 - p l a y e r _ T W O -->
+          <div class="col-lg-6 col-md-12 split4">
+              <div id="GameGontainer"> 
+                  <h1>player 2</h1>
+                  <div class="gameidDiv"> 
+                       <h3>game ID: <span class="gameid"></span></h3>
+                  </div>
+                      
+                  <h3>draws left:<span class="p2drawcnt"></span></h3>
+
+                <div class="stack">
+                  <div class="back">
+                    <div class="tablecell">
+                      <img src="Images/playingcards/cardback.jpg" class="cardback">
+                    </div>                
+                    <div class="playercard2 deck tablecell">
+                    <!-- drawn card here -->
+                    </div>
+                </div>
+                  </div>
+                  <button class="drawbutton" id="player2"> Draw</button>
+            </div>
+          </div>    
     </div>
- </div>
+
+<!--    F  O  O  T  E  R   -->
 
 <div class="row">
     <div class="col-lg-12 footer">
         <div class="socialicons">
-<!--             <a class="nobg" target="_blank" href="https://vimeo.com/ashlei"><img src="Images/vimeo.png" alt="vimeo icon" style="width:30px;clear:both;"></a>
+        <!-- a class="nobg" target="_blank" href="https://vimeo.com/ashlei"><img src="Images/vimeo.png" alt="vimeo icon" style="width:30px;clear:both;"></a>
             <a class="nobg" target="_blank" href="https://linkedin.com/in/ashlei-t"><img src="Images/linkedin.png" alt="vimeo icon" style="width:30px;"></a>
             <a class="nobg" target="_blank" href="https://twitter.com/Ashyyface"><img src="Images/twitter.png" alt="vimeo icon" style="width:30px;"></a>
             <a class="nobg" target="_blank" href="https://instagram.com/ashyyyyy"><img src="Images/ig.png" alt="vimeo icon" style="width:30px;"></a>  -->
@@ -108,11 +124,12 @@ WORKING FIREBASE CODE
         </div>
     <div class="clear"></div>
 </div>
-    <!-- Firebase Reference -->
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- game.js -->
-    <script src="game.js"></script>
-  </body>
+
+<!-- Firebase Reference -->
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="war.js"></script>
+
+</body>
 </html>
