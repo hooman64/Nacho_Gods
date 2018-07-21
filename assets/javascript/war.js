@@ -305,26 +305,26 @@ console.log(count_index+"~~~~~~~~~")
             var img2 = $('<img>');
 
       if (playerID == 1) {
-            img.attr('src','Images/playingcards/' + p1fb[drawnCardIndex] + '_of_' + suit[suitnum] + '.png');
+            img.attr('src','assets/Images/playingcards/' + p1fb[drawnCardIndex] + '_of_' + suit[suitnum] + '.png');
             img.attr('class','playingcard');
             $('.playercard1').empty();
             $('.playercard1').append(img);
             console.log(p1fb[drawnCardIndex]);
             
-            img2.attr('src','Images/playingcards/' + p2fb[drawnCardIndex] + '_of_' + suit[suitnum] + '.png');
+            img2.attr('src','assets/Images/playingcards/' + p2fb[drawnCardIndex] + '_of_' + suit[suitnum] + '.png');
             img2.attr('class','playingcard');
             $('.playercard2').empty();
             $('.playercard2').append(img2);
             console.log(p2fb[drawnCardIndex]);
 
       } else if (playerID == 2) {
-            img.attr('src','Images/playingcards/' + p1fb[drawnCardIndex] + '_of_' + suit[suitnum] + '.png');
+            img.attr('src','assets/Images/playingcards/' + p1fb[drawnCardIndex] + '_of_' + suit[suitnum] + '.png');
             img.attr('class','playingcard');
             $('.playercard1').empty();;
             $('.playercard1').append(img);
             console.log(p1fb[drawnCardIndex]);
 
-            img2.attr('src','Images/playingcards/' + p2fb[drawnCardIndex] + '_of_' + suit[suitnum] + '.png');
+            img2.attr('src','assets/Images/playingcards/' + p2fb[drawnCardIndex] + '_of_' + suit[suitnum] + '.png');
             img2.attr('class','playingcard');
             $('.playercard2').empty();
             $('.playercard2').append(img2);
