@@ -181,7 +181,7 @@ h3 {
 	height: 100vh;
 	width: 100vw;
 	overflow: hidden;
-	background-image: url('Images/poolpattern.jpg');
+	background-image: url('assets/Images/poolpattern.jpg');
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -207,7 +207,7 @@ h3 {
 	line-height: 1.5 em;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: url('Images/poolpattern.jpg');
+    background-image: url('assets/Images/poolpattern.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -245,7 +245,7 @@ h3 {
 }
 
 .subfooter1 {
-	background-image: url('Images/pinkandblue.jpg');
+	background-image: url('assets/Images/pinkandblue.jpg');
     background-attachment: fixed;
     background-size: cover;
     min-height: 60vh !important;
